@@ -3,6 +3,7 @@ WITH sub AS (
         orders_id,
         date_date,
         quantity,
+        revenu,
         purchase_cost,
         margin
     FROM
@@ -26,6 +27,7 @@ SELECT
     sub.date_date AS date_date,
     ROUND(sub.margin + sub2.shipping_fee - sub2.logcost - sub2.ship_cost, 2) AS operational_margin,
     sub.quantity AS quantity,
+    sub.revenu AS revenue,
     sub.purchase_cost AS purchase_cost,
     sub.margin AS margin
 FROM
