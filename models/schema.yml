@@ -167,7 +167,7 @@ sources:
         tests:
           - unique:
               column_name: "(date_date || '-' || campgn_name)"
-              
+
   - name: intermediate
     schema: dbt_brice
     tables:
@@ -185,3 +185,14 @@ sources:
             description: total number of ads' impressions per day
           - name: ads_clicks
             description: total number of ads' clicks per day
+  - name: finance
+    schema: dbt_brice_finance
+    tables: 
+      - name: finance_campaigns_day
+        description: ads margin calculation with operational margin done before
+        columns:
+          - name: date_date
+            description: all costs and margin per day
+            tests:
+              - unique
+              - not_null
