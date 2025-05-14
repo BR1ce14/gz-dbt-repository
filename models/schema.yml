@@ -61,12 +61,16 @@ sources:
               - not_null
           - name: paid_source
             description: the company where the ad campaign was run
+            tests:
+              - not_null
           - name: campaign_key
             description: identification number of the campaign
             tests:
               - not_null
           - name: campgn_name
             description: name of the campaign
+            tests:
+              - not_null
           - name: ads_cost
             description: cost of the campaign
           - name: impression
@@ -86,12 +90,16 @@ sources:
               - not_null
           - name: paid_source
             description: the company where the ad campaign was run
+            tests:
+              - not_null
           - name: campaign_key
             description: identification number of the campaign
             tests:
               - not_null
-          - name: campaign_name
+          - name: campgn_name
             description: name of the campaign
+            tests:
+              - not_null
           - name: ads_cost
             description: cost of the campaign
           - name: impression
@@ -111,12 +119,16 @@ sources:
               - not_null
           - name: paid_source
             description: the company where the ad campaign was run
+            tests:
+              - not_null
           - name: campaign_key
             description: identification number of the campaign
             tests:
               - not_null
           - name: campgn_name
             description: name of the campaign
+            tests:
+              - not_null
           - name: ads_cost
             description: cost of the campaign
           - name: impression
@@ -136,12 +148,16 @@ sources:
               - not_null
           - name: paid_source
             description: the company where the ad campaign was run
+            tests:
+              - not_null
           - name: campaign_key
             description: identification number of the campaign
             tests:
               - not_null
-          - name: campaign_name
+          - name: campgn_name
             description: name of the campaign
+            tests:
+              - not_null
           - name: ads_cost
             description: cost of the campaign
           - name: impression
