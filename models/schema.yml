@@ -53,9 +53,101 @@ sources:
             description: a column to show expedition costs of an order
       - name: adwords
         identifier: raw_gz_adwords
+        description: information about adwords campaigns (name, cost, clicks...)
+        columns: 
+          - name: date_date
+            description: date of the campaign
+            tests:
+              - not_null
+          - name: paid_source
+            description: the company where the ad campaign was run
+          - name: campaign_key
+            description: identification number of the campaign
+            tests:
+              - not_null
+          - name: campgn_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of the campaign
+          - name: impression
+            description: campaign's number of impression
+          - name: click
+            description: campaign's number of click
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campgn_name)"
       - name: bing
         identifier: raw_gz_bing
+        description: information about bing campaigns (name, cost, clicks...)
+        columns: 
+          - name: date_date
+            description: date of the campaign
+            tests:
+              - not_null
+          - name: paid_source
+            description: the company where the ad campaign was run
+          - name: campaign_key
+            description: identification number of the campaign
+            tests:
+              - not_null
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of the campaign
+          - name: impression
+            description: campaign's number of impression
+          - name: click
+            description: campaign's number of click
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campgn_name)"
       - name: criteo
         identifier: raw_gz_criteo
+        description: information about criteo campaigns (name, cost, clicks...)
+        columns: 
+          - name: date_date
+            description: date of the campaign
+            tests:
+              - not_null
+          - name: paid_source
+            description: the company where the ad campaign was run
+          - name: campaign_key
+            description: identification number of the campaign
+            tests:
+              - not_null
+          - name: campgn_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of the campaign
+          - name: impression
+            description: campaign's number of impression
+          - name: click
+            description: campaign's number of click
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campgn_name)"
       - name: facebook
         identifier: raw_gz_facebook
+        description: information about facebook campaigns (name, cost, clicks...)
+        columns: 
+          - name: date_date
+            description: date of the campaign
+            tests:
+              - not_null
+          - name: paid_source
+            description: the company where the ad campaign was run
+          - name: campaign_key
+            description: identification number of the campaign
+            tests:
+              - not_null
+          - name: campaign_name
+            description: name of the campaign
+          - name: ads_cost
+            description: cost of the campaign
+          - name: impression
+            description: campaign's number of impression
+          - name: click
+            description: campaign's number of click
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campgn_name)"
