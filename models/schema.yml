@@ -167,3 +167,21 @@ sources:
         tests:
           - unique:
               column_name: "(date_date || '-' || campgn_name)"
+              
+  - name: intermediate
+    schema: dbt_brice
+    tables:
+      - name: int_campaigns_day
+        description: aggregated version of int_campaigns model for each day
+        columns:
+          - name: date_date
+            description: date of the campaigns
+            tests:
+              - unique
+              - not_null
+          - name: ads_cost
+            description: total cost of ads per  day
+          - name: ads_impression
+            description: total number of ads' impressions per day
+          - name: ads_clicks
+            description: total number of ads' clicks per day
