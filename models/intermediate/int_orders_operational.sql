@@ -17,7 +17,7 @@ sub2 AS (
         SUM(logcost) AS logcost,
         SUM(ship_cost) AS ship_cost
     FROM 
-        {{ ref("stg_raw__ship") }} AS ship
+        {{ ref("stg_raw__ship") }} 
     GROUP BY 
         orders_id
 )
@@ -29,7 +29,10 @@ SELECT
     sub.quantity AS quantity,
     sub.revenu AS revenue,
     sub.purchase_cost AS purchase_cost,
-    sub.margin AS margin
+    sub.margin AS margin,
+    sub2.shipping_fee AS shipping_fee,
+    sub2.logcost AS logcost,
+    sub2.ship_cost AS ship_cost
 FROM
     sub
 LEFT JOIN 
