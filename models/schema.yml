@@ -51,3 +51,11 @@ sources:
             description: a column to show logistic costs of an order
           - name: ship_cost
             description: a column to show expedition costs of an order
+      - name: adwords
+        identifier: raw_gz_adwords
+      - name: bing
+        identifier: raw_gz_bing
+      - name: criteo
+        identifier: raw_gz_criteo
+      - name: facebook
+        identifier: raw_gz_facebook
